@@ -1,17 +1,24 @@
 import './App.css';
-import  Navbar  from "./componentes/navbar"
-import  Titulo  from "./componentes/title"
-import Carrito from "./componentes/title"
+import Navbar from "./componentes/navbar"
+import Titulo from "./componentes/title"
+import Prendas from "./componentes/Catalogo"
+
 
 function App() {
   return (
+    <>
     <header>
-    <Titulo/>
+      <Titulo/>
+      
+      <Navbar/>
 
-    <Navbar/>
-
-    <Carrito/>
+      
     </header>
+
+    <main>
+      <Prendas/>  
+    </main>
+    </>
   );
 }
 

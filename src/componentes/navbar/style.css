@@ -1,9 +1,16 @@
 
-.Menu {
+.menu-links {
+    margin-top: 30px;
     display: flex;
     justify-content: space-evenly;
 }
 
+.menu-carrito {
+    display: flex;
+}
+ .menu-carrito p {
+    font-size: large;
+ }
 
 
 
