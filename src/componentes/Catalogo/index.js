@@ -1,6 +1,6 @@
 import "./style.css"
 import imgPrenda from "../Archivos/img"
-import array from "../Catalogo/array"
+//import array from "../Catalogo/array"
 
 const Prendas = () => {
     return (

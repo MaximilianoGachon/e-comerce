@@ -1,23 +1,43 @@
 import "./style.css"
 import ImgCarrito from "../Archivos/img"
+import { Link } from "react-router-dom"
+
+const routes = [
+  {
+    path: "/",
+    text: "Inicio"
+  },
+  {
+    path: "/catalogo",
+    text: "Catalogo"
+  },
+  {
+    path: "/categoria",
+    text: "Categoria"
+  },
+  {
+    path: "/contacto",
+    text: "Contacto"
+  },
+]
 
 const Navbar = () => {
   return (
-    <nav>
-      
+    <header>
+      <nav>
         <ul className="menu-links">
-          <li><a href="">Inicio</a></li>
-          <li><a href="">Catalogo</a></li>
-          <li><a href="">Categoria</a></li>
-          <li><a href="">Contacto</a></li>
+
+          {routes.map((route) => (
+            <Link key={route.path}>{route.text}</Link>
+          ))}
+
           <div className="menu-carrito">
-          <img src={ImgCarrito.imgCarrito}/>
-          <p>3</p>
+            <img src={ImgCarrito.imgCarrito} />
+            <p>3</p>
           </div>
         </ul>
-
-      
-    </nav>
+      </nav>
+    </header>
   )
 }
 
