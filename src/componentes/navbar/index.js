@@ -1,15 +1,15 @@
 import "./style.css"
 import ImgCarrito from "../Archivos/img"
-import { Link } from "react-router-dom"
+import { Link} from "react-router-dom"
 
-const routes = [
+const Routes = [
   {
     path: "/",
     text: "Inicio"
   },
   {
     path: "/catalogo",
-    text: "Catalogo"
+    text: "Prendas"
   },
   {
     path: "/categoria",
@@ -27,8 +27,8 @@ const Navbar = () => {
       <nav>
         <ul className="menu-links">
 
-          {routes.map((route) => (
-            <Link key={route.path}>{route.text}</Link>
+          {Routes.map((Route) => (
+            <Link to={Route.path}>{Route.text}</Link>
           ))}
 
           <div className="menu-carrito">

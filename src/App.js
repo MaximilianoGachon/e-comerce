@@ -2,13 +2,16 @@ import './App.css';
 import Navbar from "./componentes/navbar"
 import Titulo from "./componentes/title"
 //import Prendas from "./componentes/Catalogo"
-import { BrowserRouter, routes, route } from "react-router-dom"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Inicio from './page/inicio';
-import Catalogo from './page/catalogo';
 import Categoria from './page/categorias';
 import Contacto from './page/contacto';
+import Prendas from './page/catalogo';
+import { useState } from 'react';
+ 
 
 function App() {
+
   return (
     <BrowserRouter>
       
@@ -17,12 +20,12 @@ function App() {
         <Navbar />
 
       <main>
-        <routes>
-          <route path='/' element={<Inicio/>}/>
-          <route path='/catalogo' element={<Catalogo/>}/>  
-          <route path='/categoria' element={<Categoria/>}/> 
-          <route path='/contacto' element={<Contacto/>}/> 
-        </routes>
+        <Routes>
+          <Route path='/' element={<Inicio/>}/>
+          <Route path='/catalogo' element={<Prendas/>}/>  
+          <Route path='/categoria' element={<Categoria/>}/> 
+          <Route path='/contacto' element={<Contacto/>}/> 
+        </Routes>
       </main>
 
     </BrowserRouter>
