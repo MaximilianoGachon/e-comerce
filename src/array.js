@@ -150,11 +150,11 @@ const productsPrenda = [
     })
   }
   
-  export const getProductById = (id) => {
+  export const getProductId = (id) => {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
         console.log({productsPrenda, id})
-        const product = productsPrenda.find((product) => product.id === id)
+        const product= productsPrenda.find((product) => product.id === id)
         if (product) return resolve(product)
         return reject({ error: 'No encontrado' })
       }, 500)

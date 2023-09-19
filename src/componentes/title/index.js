@@ -3,7 +3,7 @@ import "./style.css"
 const Titulo = () => {
     return (
         
-        <h1>tienda online</h1>
+        <h1>Tienda Online</h1>
     )
 }
 
