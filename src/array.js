@@ -1,10 +1,12 @@
+import Imagen1 from "./componentes/Archivos/Img/Imagen1.jpg"
+
 const productsPrenda = [
     {
       id: 1,
       titulo: "Camiseta",
       precio: 19.99,
       descripcion: "Camiseta de algodón de alta calidad",
-      imagen: "imagen1.jpg"
+      imagen: Imagen1
     },
     {
       id: 2,
@@ -160,3 +162,4 @@ const productsPrenda = [
       }, 500)
     })
   }
+

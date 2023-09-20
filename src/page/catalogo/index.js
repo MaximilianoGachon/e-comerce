@@ -3,6 +3,7 @@ import { useEffect, useState } from "react"
 import { getProducts } from "../../array"
 import { Link } from "react-router-dom"
 
+
 //import { getRate } from "../../utils/getRate"
 
 const Prendas = () => {
