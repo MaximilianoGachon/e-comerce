@@ -1,5 +1,3 @@
-
-
 const productsPrenda = [
     {
       id: 1,
@@ -86,7 +84,7 @@ const productsPrenda = [
       titulo: "Blusa",
       precio: "USD $29.99",
       descripcion: "Blusa elegante para mujer",
-      categoria: "Remera",
+      categoria: "Camiseta",
       imagen: "imagen11.jpg"
     },
     {
@@ -94,7 +92,7 @@ const productsPrenda = [
       titulo: "Chaleco",
       precio: "USD $44.99",
       descripcion: "Chaleco informal para hombre",
-      categoria: "Remera",
+      categoria: "Camiseta",
       imagen: "imagen12.jpg"
     },
     {
@@ -183,3 +181,14 @@ const productsPrenda = [
     })
   }
 
+  export const getProductCat = (categoria) => {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        console.log({productsPrenda, categoria})
+        const product= productsPrenda.find((product) => product.categoria)
+        if (product) return resolve(product)
+        return reject({ error: 'No encontrado' })
+      }, 500)
+    })
+  }
+ 
