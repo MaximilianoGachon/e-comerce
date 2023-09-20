@@ -36,8 +36,9 @@ const Detalle = () => {
             <div key={id} className="Card-Detail">
                 <ul>
                     <li><strong>{product?.titulo}</strong></li>
-                    <li><strong>{product?.imagen}</strong></li>
+                    <li><img src={product?.imagen}/> </li>
                     <li><strong>{product?.descripcion}</strong></li>
+                    <li><strong>{product?.categoria}</strong></li>
                     <li><strong>{product?.precio}</strong></li>
                 </ul>
             </div>

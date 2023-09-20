@@ -1,5 +1,4 @@
 import "./style.css"
-import ImgCarrito from "../Archivos/img"
 import { Link} from "react-router-dom"
 
 const Routes = [
@@ -32,7 +31,7 @@ const Navbar = () => {
           ))}
 
           <div className="menu-carrito">
-            <img src={ImgCarrito.imgCarrito} />
+            <img src={"/Img/Img-Carrito.png"} />
             <p>3</p>
           </div>
         </ul>

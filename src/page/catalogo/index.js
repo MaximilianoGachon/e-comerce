@@ -3,9 +3,6 @@ import { useEffect, useState } from "react"
 import { getProducts } from "../../array"
 import { Link } from "react-router-dom"
 
-
-//import { getRate } from "../../utils/getRate"
-
 const Prendas = () => {
 
     const [loading, setLoading] = useState(false)
@@ -22,7 +19,7 @@ const Prendas = () => {
 
     if (loading) return (<h3>Cargando Prendas...</h3>)
  
-    return (
+    return ( 
     <div className="Card">
 
         {products.map(({ 
@@ -30,19 +27,25 @@ const Prendas = () => {
             titulo,
             precio,
             descripcion,
+            categoria,
             imagen }) => (
 
             <div key={id} className="Card-Detail">
+
                 <ul>
+
                     <li><strong>{titulo}</strong></li>
-                    <li><strong>{imagen}</strong></li>
+                    <div><img src={`/Img/${imagen}`}
+                    className="Img-Card"/></div>
                     <li><strong>{descripcion}</strong></li>
+                    <li><strong>{categoria}</strong></li>
                     <li><strong>{precio}</strong></li>
-                    <li>
+                    
+
                     <Link to={`/catalogo/${id}`}>
                     Ver mas
                    </Link>
-                    </li>
+                    
                 </ul>
             </div>
         ))}
